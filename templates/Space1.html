@@ -1,0 +1,48 @@
+{% extends "bootstrap/base.html" %} 
+
+{% block title %}
+Space 1 
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('static', filename='style/dashboard.css')}}">
+<script src = "https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js" integrity="sha512-UXumZrZNiOwnTcZSHLOfcTs0aos2MzBWHXOHOuB0J/R44QB0dwY5JgfbvljXcklVf65Gc4El6RjZ+lnwd2az2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-zoom/1.2.0/chartjs-plugin-zoom.min.js" integrity="sha512-TT0wAMqqtjXVzpc48sI0G84rBP+oTkBZPgeRYIOVRGUdwJsyS3WPipsNh///ay2LJ+onCM23tipnz6EvEy2/UA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+{% endblock %}
+
+{% block scripts %}
+<script src = "{{ url_for('static',filename='Charts/Space/Space1CO2.js') }}"></script>
+<script src = "{{ url_for('static',filename='Charts/Space/Space1humidity.js') }}"></script>
+<script src = "{{ url_for('static',filename='Charts/Space/Space1light.js') }}"></script>
+<script src = "{{ url_for('static',filename='Charts/Space/Space1temp.js') }}"></script>
+{% endblock scripts %}
+
+{% block content %} 
+{% include 'SpaceNavBar.html' %}
+<div class="container-fluid">
+    <div class="col-sm-3 col-md-2 sidebar">
+        {% include 'sideBar.html' %}
+    </div>
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+  <div class="row placeholders">
+    <div class="col-xs-7 col-sm-6 placeholder">
+        <canvas id="co2_Space1"></canvas>
+    </div>
+    <div class="col-xs-7 col-sm-6 placeholder">
+        <canvas id="humidity_Space1"></canvas>
+    </div>
+  </div>
+  <div class="row placeholders">
+    <div class="col-xs-7 col-sm-6 placeholder">
+        <canvas id="temp_Space1"></canvas>
+    </div>
+    <div class="col-xs-7 col-sm-6 placeholder">
+        <canvas id="light_Space1"></canvas>
+    </div>
+  </div>
+</div>
+</div>
+{% endblock %}

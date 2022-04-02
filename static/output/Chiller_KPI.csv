@@ -1,0 +1,8 @@
+name,value
+Replaced asset lifetime in years,15
+Mean time between failure(in Hours),1734.4
+Mean time to repair(in $),12.666666666666666
+Asset maintenance cost variance(in $),0.8571428571428571
+Cost to repair(in $),210
+Cost to replace(in $),133.33333333333334
+Unplanned Maintenance Percentage(%),2.631578947368421

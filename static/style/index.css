@@ -1,0 +1,23 @@
+body {
+  padding-top: 10%;
+  background-color: #eee;
+}
+  
+.center {
+  padding: 10px 15px;
+  text-align: center;
+}
+
+.container{
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.container .center button{
+  margin-bottom: 15px;
+}
+
+.container .center .heading{
+  margin-bottom: 50px;
+}

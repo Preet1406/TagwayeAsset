@@ -1,0 +1,57 @@
+<html>
+    <head>
+      <script type="module" src="https://cdn.jsdelivr.net/npm/@microsoft/fast-components/dist/fast-components.min.js"></script>
+    </head>
+    <body>
+      <fast-tree-view>
+        <fast-tree-item>
+          <a href="{{ url_for('dashboard') }}">Overview</a>
+        </fast-tree-item>
+        <fast-tree-item>
+          <a href="{{ url_for('buildingA') }}">Building A</a>
+          <fast-tree-item>Floor 1
+            <fast-tree-item>
+              <a href="{{ url_for('space_1') }}">Space 1</a>
+              <fast-tree-item>
+                <a href="{{ url_for('AHUEquipmentDetails') }}">AHU-01</a>
+                <fast-tree-item slot="item">
+                  <a href="{{ url_for('AHUHistoricalData') }}">Historical Data</a>
+                </fast-tree-item>
+                <fast-tree-item slot="item">Present Data</fast-tree-item>
+                <fast-tree-item slot="item">
+                  <a href="{{ url_for('AHUForecastData') }}">Forecast Data</a>
+                </fast-tree-item>
+              </fast-tree-item>
+              <fast-tree-item>
+                <a href="{{ url_for('ChillerEquipmentDetails') }}">Chiller</a>
+                <fast-tree-item slot="item">
+                  <a href="{{ url_for('ChillerHistoricalData') }}">Historical Data</a>
+                </fast-tree-item>
+                <fast-tree-item slot="item">Present Data</fast-tree-item>
+                <fast-tree-item slot="item">
+                  <a href="{{ url_for('ChillerForecastData') }}">Forecast Data</a>
+                </fast-tree-item>
+              </fast-tree-item>
+              <fast-tree-item>Equipment 3</fast-tree-item>
+              <fast-tree-item>Equipment 4</fast-tree-item>
+            </fast-tree-item>
+            <fast-tree-item>
+              <a href="{{ url_for('space_2') }}">Space 2</a>
+            </fast-tree-item>
+            <fast-tree-item>
+              <a href="{{ url_for('space_3') }}">Space 3</a>
+            </fast-tree-item>
+            <fast-tree-item>
+              <a href="{{ url_for('space_4') }}">Space 4</a>
+            </fast-tree-item>
+          </fast-tree-item>
+          <fast-tree-item>Floor 2</fast-tree-item>
+          <fast-tree-item>Floor 3</fast-tree-item>
+          <fast-tree-item>Floor 4</fast-tree-item>
+        </fast-tree-item>
+        <fast-tree-item>Building B</fast-tree-item>
+        <fast-tree-item>Building C</fast-tree-item>
+        <fast-tree-item>Building D</fast-tree-item>
+    </fast-tree-view>
+    </body>
+</html>

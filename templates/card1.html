@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <script type="module" src="https://cdn.jsdelivr.net/npm/@microsoft/fast-components/dist/fast-components.min.js"></script>
+    </head>
+    <body>
+        <div class="row placeholders">
+            <div class="col-sm-4">
+                <fast-card style="width: 300px; background-color: #ff3333">
+                    <div style="padding: 0 10px 10px; color: var(--neutral-foreground-rest);">
+                        <h2>Alert</h2>
+                        <p>The AHU Electricity Consumption is above 8 KWh between 11am and 12pm</p>
+                        <fast-button style = "background-color: black">
+                            <a href="{{ url_for('AHUForecastData') }}">Know More</a>
+                        </fast-button>
+                    </div>
+                </fast-card>
+            </div>
+            <div class="col-sm-4">
+                <fast-card style="width: 300px; background-color: #ffcc33">
+                    <div style="padding: 0 10px 10px; color: black;">
+                        <h2>Warning</h2>
+                        <p>The average cost of Chiller: electricity from forecast is about Rs. 1000</p>
+                        <fast-button style = "background-color: black">
+                            <a href="{{ url_for('ChillerForecastData') }}">Know More</a>
+                        </fast-button>
+                    </div>
+                </fast-card>
+            </div>
+            <div class="col-sm-4">
+                <fast-card style="width: 300px; background-color: #99cc00">
+                    <div style="padding: 0 10px 10px; color: black;">
+                        <h2>Good</h2>
+                        <p>Air Quaility Index of the space is between 50 and 100, and is satisfactory</p>
+                        <fast-button style = "background-color: black">
+                            <a href="{{ url_for('floor_1') }}">Know More</a></fast-button>
+                    </div>
+                </fast-card>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,96 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}
+AHU
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('static', filename='style/dashboard.css')}}">
+{% endblock %}
+
+{% block content %}
+  {% include 'EquipmentsNavbar.html' %}
+    <div class="container-fluid">
+      <div class="col-sm-3 col-md-2 sidebar">
+        {% include 'sideBar.html' %}
+      </div>
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h2 class="sub-header">AHU Equipment Details</h2>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>AHU-01</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Status</td>
+                  <td>Normal</td>
+                </tr>
+                <tr>
+                  <td>Type</td>
+                  <td>Mechanical Component</td>
+                </tr>
+                <tr>
+                  <td>Description</td>
+                  <td>Air Handling Unit</td>
+                </tr>
+                <tr>
+                  <td>System</td>
+                  <td>HVAC</td>
+                </tr>
+                <tr>
+                  <td>Location</td>
+                  <td>Floor-01</td>
+                </tr>
+                <tr>
+                  <td>Brand</td>
+                  <td>Carrier</td>
+                </tr>
+                <tr>
+                  <td>Model ID</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Material</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>BIM ID</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Power Supply</td>
+                  <td>240 V</td>
+                </tr>
+                <tr>
+                  <td>Weight</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Mechanical Efficiency (%)</td>
+                  <td>80</td>
+                </tr>
+                <tr>
+                  <td>Capacity (in KW)</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Dimensions (LXWXH)</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-4 col-lg-offset-4">
+            <a href="static/EquipmentDetails/AHU-Equipment-Details.pdf" download="AHU-Equipment-Details">
+              <button type="button" class="btn btn-success" style = "margin-bottom: 20px">O&M Manual</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}

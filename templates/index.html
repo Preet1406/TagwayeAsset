@@ -1,0 +1,25 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}
+Neuro Asset Management
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('static', filename='style/index.css')}}">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+      <div class="center">
+        <h2 class="heading">Asset Management</h2>
+        <a href="{{ url_for('login') }}">
+            <button class="btn btn-lg btn-primary btn-block">Login</button>
+        </a>
+        <a href="{{ url_for('signup') }}">
+            <button class="btn btn-lg btn-primary btn-block" href="{{ url_for('signup') }}">Sign Up</button>
+        </a>
+      </div>
+
+    </div>
+{% endblock %}

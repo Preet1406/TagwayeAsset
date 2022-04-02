@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <script type="module" src="https://cdn.jsdelivr.net/npm/@microsoft/fast-components/dist/fast-components.min.js"></script>
+    </head>
+    <body>
+        <div class="row placeholders">
+            <div class="col-sm-4">
+                <fast-card style="width: 300px; background-color: #ffcc33">
+                    <div style="padding: 0 10px 10px; color: black;">
+                        <h2>Warning</h2>
+                        <p>Average Chiller Water Rate is 131 L/sec from Forecast</p>
+                        <fast-button style = "background-color: black">
+                            <a href="{{ url_for('ChillerForecastData') }}">Know More</a>
+                        </fast-button>
+                    </div>
+                </fast-card>
+            </div>
+            <div class="col-sm-4">
+                <fast-card style="width: 300px; background-color: #99cc00">
+                    <div style="padding: 0 10px 10px; color: black;">
+                        <h2>Good</h2>
+                        <p>The current Health of AHU01 and Chiller are 0.5 which shows good Health</p>
+                        <fast-button style = "background-color: black">
+                            <a href="{{ url_for('AHUHistoricalData') }}">Know More</a></fast-button>
+                    </div>
+                </fast-card>
+            </div>
+            <div class="col-sm-4">
+                <fast-card style="width: 300px; background-color: #99cc00">
+                    <div style="padding: 0 10px 10px; color: black;">
+                        <h2>Good</h2>
+                        <p>Indoor CO2 concentration on all four floors is normal with good air exchange</p>
+                        <fast-button style = "background-color: black">
+                            <a href="{{ url_for('floor_1') }}">Know More</a></fast-button>
+                    </div>
+                </fast-card>
+            </div>
+        </div>
+    </body>
+</html>
