@@ -67,7 +67,7 @@ def signup():
         new_user = User(username=form.username.data, email=form.email.data, password=hashed_password)
         db.session.add(new_user)
         db.session.commit()
-        return render_template('login.html', message = "New user has been created!")
+        return render_template('login.html', form=Login_form, message = "New user has been created!")
 
     return render_template('signup.html', form=form)
 
